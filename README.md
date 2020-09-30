@@ -16,7 +16,7 @@ Zadanie polega na uzupełnieniu istniejącego kodu projektu aplikacji _Grade Boo
 2. Sklonuj repozytorium na lokalny dysk.
 3. Za pomocą Visual Studio 2019 otwórz plik _solution_ `GradeBook.sln`. Solution składa się z projektu aplikacji konsolowej oraz projektu testów jednostkowych. _Solution_ jest wstępnie skonfigurowane.
 4. Zaktualizuj rozszerzenia NuGet (prawokliknij na <kbd>Solution Explorer</kbd> → <kbd>Manage NuGet Packages for Solution..</kbd>). Jeśli tego nie zrobisz, prawdopodobnie testy się nie uruchomią.
-5. Uruchom _TestExplorer_ i sprawdź, czy testy się wykonują (oczywiście wszystkie zakończą się niepowodzeniem).
+5. Uruchom _TestExplorer_ i sprawdź, czy testy się wykonują (oczywiście przy pierwszym uruchomieniu wszystkie zakończą się niepowodzeniem).
 6. Wykonuj polecenia z pliku [Readme1.md](README1.MD) kolejno, krok po kroku.
 7. Po wykonaniu danego kroku uruchom testy i sprawdź, czy któreś z nich zostały zaakceptowane. Musisz się domyślić, które testy odpowiedzialne są za dany krok. Staraj się zadania wykonywać sekwencyjnie - w podanej przez autora kolejności.
 
