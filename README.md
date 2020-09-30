@@ -10,7 +10,7 @@ Zadanie polega na uzupełnieniu istniejącego kodu projektu aplikacji _Grade Boo
 
 **Poświęcony czas**: od 2 do kilkunastu godzin, w zależności od kompetencji i sprawności.
 
-**Szczegółowe polecenia:** [Zadania do wykonania - w języku angielskim](Tasks-to-be-performed.md)
+**Szczegółowe polecenia:** [Zadania do wykonania - w języku angielskim (Tasks-to-be-performed.md)](Tasks-to-be-performed.md)
 
 **Zadania do wykonania:**
 
