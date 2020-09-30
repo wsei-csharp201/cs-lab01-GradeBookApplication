@@ -8,7 +8,7 @@ Zadanie polega na uzupełnieniu istniejącego kodu projektu aplikacji _Grade Boo
 
 **Poświęcony czas**: od 2 do kilkunastu godzin, w zależności od kompetencji i sprawności.
 
-[Oryginalna treść zadania](README1.MD)
+[Oryginalna treść zadania - plik Readme1.md](README1.MD)
 
 **Zadania do wykonania:**
 
