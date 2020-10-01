@@ -5,7 +5,6 @@ The C Sharp Grade Book Application is a designed to allow instructors to create 
 ## Accepted Commands
 
 ### Commands when no gradebooks are open
-
 - "Create `Name of Gradebook` `Is this Gradebook Weighted (true/false)`" : Creates a new gradebook with the provided name
 - "Help" : gives you a list of all valid commands within the given context
 - "Load `Name of GradeBook`"
@@ -90,7 +89,7 @@ __Note:__ This isn't the only way to accomplish implementation, however; this is
 			- This should accept a parameter `name` of type `string`.
 			- This should set `Type` to `GradeBookType.Ranked`.
 			- This should call the `BaseGradeBook` constructor by putting ` : base(name)` after the constructor declaration. _(This was not covered in the course, it calls the constructor of the inherited class.)_
-
+## tutaj skoñczy³em
 	- [ ] Override `RankedGradeBook`'s `GetLetterGrade` method
 		- [ ] Provide the appropriate grades based on how the input grade compares to other students.
 			_(One way to solve this is to figure out how many students make up 20%, then loop through all the grades and check how many scored higher than the input average, every N students where N is that 20% value drop a letter grade.)_
