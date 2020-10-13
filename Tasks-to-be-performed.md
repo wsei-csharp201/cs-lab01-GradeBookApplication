@@ -133,7 +133,7 @@ __Note:__ This isn't the only way to accomplish implementation, however; this is
 			- This should be of type `bool`.
 			- This should be named `IsWeighted`.
 
-	- [ ] Refactor constructor of `BaseGradeBook`
+	- [x] Refactor constructor of `BaseGradeBook`
 		_Note, once this group of tasks is begun the code will not compile until the entire group of tasks is complete._
 		- [x] Add a `bool` to the `BaseGradeBook` constructor
 			- This should be of type `bool`.
@@ -148,9 +148,9 @@ __Note:__ This isn't the only way to accomplish implementation, however; this is
 			- This should be of type `bool`.
 			- This should be the second parameter.
 			- This will require the bool to be added to the call to the base constructor.
-		- [ ] Update `StartingUserInterface.CreateCommand` condition
+		- [x] Update `StartingUserInterface.CreateCommand` condition
 			- Change the condition checking if `parts` is not equal to 3 to be is not equal to 4.
-		- [ ] Update `StartingUserInterface.CreateCommand` to accept `IsWeighted`
+		- [x] Update `StartingUserInterface.CreateCommand` to accept `IsWeighted`
 			- This should use `parts[3]` for the last parameter where the gradebooks are instantiated.
 			- Update the message provided by this condition to write to the console "Command not valid, Create requires a name, type of gradebook, if it's weighted (true / false).".
 
