@@ -58,41 +58,41 @@ If you would rather use something other than Visual Studio
 __Note:__ This isn't the only way to accomplish implementation, however; this is what the project's tests are expecting. Implementing the features in a different way will likely result in being marked as incomplete / incorrect.
 
 - [ ] Add support for Ranked Grading
-	- [ ] Creating The `GradeBookType` Enum.
-		- [ ] Create a new Enum `GradeBookType`.
+	- [x] Creating The `GradeBookType` Enum.
+		- [x] Create a new Enum `GradeBookType`.
 			- This should be located in the `Enums` directory.
 			- This should use the `GradeBooks.Enums` namespace.
 			- This should use the `public` access modifier.
 			- This should contain the values `Standard`, `Ranked`, `ESNU`, `OneToFour`, and `SixPoint`.
 
-	- [ ] Add `Type` property
-		- [ ] Add a new property `Type` to `BaseGradeBook`
+	- [x] Add `Type` property
+		- [x] Add a new property `Type` to `BaseGradeBook`
 			- This should use the name `Type`.
 			- This should be of type `GradeBookType`.
 			- This should use the `public` access modifier.
 
-	- [ ] Creating the `StandardGradeBook` class
-		- [ ] Create a class `StandardGradeBook` _(Once this change is made the code will not compile until completion of the next task)_
+	- [x] Creating the `StandardGradeBook` class
+		- [x] Create a class `StandardGradeBook` _(Once this change is made the code will not compile until completion of the next task)_
 			- This should be located in the `GradeBooks` directory.
 			- This should use the `GradeBook.GradeBooks` namespace.
 			- This should inherit the `BaseGradeBook` class.
-		- [ ] Create a constructor for `StandardGradeBook`
+		- [x] Create a constructor for `StandardGradeBook`
 			- This should accept a parameter `name` of type `string`.
 			- This should set `Type` to `GradeBookType.Standard`.
 			- This should call the `BaseGradeBook` constructor by putting ` : base(name)` after the constructor declaration. _(This was not covered in the course, it calls the constructor of the inherited class.)_
 
-	- [ ] Creating the `RankedGradeBook` class
-		-  [ ] Create a class `RankedGradeBook` _(Once this change is made the code will not compile until completion of the next task)_
+	- [x] Creating the `RankedGradeBook` class
+		-  [x] Create a class `RankedGradeBook` _(Once this change is made the code will not compile until completion of the next task)_
 			- This should be located in the `GradeBooks` directory.
 			- This should use the `GradeBook.GradeBooks` namespace.
 			- This should inherit the `BaseGradeBook` class.
-		-  [ ] Create a constructor for `RankedGradeBook`
+		-  [x] Create a constructor for `RankedGradeBook`
 			- This should accept a parameter `name` of type `string`.
 			- This should set `Type` to `GradeBookType.Ranked`.
 			- This should call the `BaseGradeBook` constructor by putting ` : base(name)` after the constructor declaration. _(This was not covered in the course, it calls the constructor of the inherited class.)_
 
-	- [ ] Override `RankedGradeBook`'s `GetLetterGrade` method
-		- [ ] Provide the appropriate grades based on how the input grade compares to other students.
+	- [x] Override `RankedGradeBook`'s `GetLetterGrade` method
+		- [x] Provide the appropriate grades based on how the input grade compares to other students.
 			_(One way to solve this is to figure out how many students make up 20%, then loop through all the grades and check how many scored higher than the input average, every N students where N is that 20% value drop a letter grade.)_
 			- If there are less than 5 students throw an `InvalidOperationException`.
 			- Return A if the input grade is in the top 20% of the class.
@@ -101,64 +101,64 @@ __Note:__ This isn't the only way to accomplish implementation, however; this is
 			- Return D if the input grade is between the top 60 and 80% of the class.
 			- Return F if the grade is below the top 80% of the class.
 
-	- [ ] Override `RankedGradeBook`'s `CalculateStatistics` method
-		- [ ] Short circuit the method if there are less than 5 students.
+	- [x] Override `RankedGradeBook`'s `CalculateStatistics` method
+		- [x] Short circuit the method if there are less than 5 students.
 			- If there are less than 5 students write "Ranked grading requires at least 5 students." to the Console.
 			- If there are 5 or more students call the base class's `CalculateStatistics` method using `base.CalculateStatistics`.
 
-	- [ ] Override `RankedGradeBook`'s `CalculateStudentStatistics` method
-		- [ ] Short circuit the method if there are less than 5 students.
+	- [x] Override `RankedGradeBook`'s `CalculateStudentStatistics` method
+		- [x] Short circuit the method if there are less than 5 students.
 			- If there are less than 5 students write "Ranked grading requires at least 5 students." to the Console.
 			- If there are 5 or more students call the base class's `CalculateStudentStatistics` method using `base.CalculateStudentStatistics`.
 
-	- [ ] Update `StartingUserInterface`'s `CreateCommand` method
-		- [ ] Update `CreateCommand`'s Conditions
+	- [x] Update `StartingUserInterface`'s `CreateCommand` method
+		- [x] Update `CreateCommand`'s Conditions
 			- When checking the `parts.Length` it should check that `parts.Length` is not 3.
 			- If `parts.Length` is not 3 write "Command not valid, Create requires a name and type of gradebook." to the Console.
-		- [ ] return a new GradeBook based on the provided type
+		- [x] return a new GradeBook based on the provided type
 			- If the value of `parts[2]` is "standard" return a newly instantiated `StandardGradeBook` using the `name` variable.
 			- If the value of `parts[2]` is "ranked" return a newly instantiated `RankedGradeBook` using the `name` variable.
 			- If the value of `parts[2]` doesn't match the above write the value of `parts[2]` followed by " is not a supported type of gradebook, please try again" to the console, then escape the method.
 
-	- [ ] Update `StartingUserInterfaces`'s `HelpCommand` method
-		- [ ] Change where `HelpCommand` outlines the "create" command to write "Create 'Name' 'Type' - Creates a new gradebook where 'Name' is the name of the gradebook and 'Type' is what type of grading it should use." to the console.
+	- [x] Update `StartingUserInterfaces`'s `HelpCommand` method
+		- [x] Change where `HelpCommand` outlines the "create" command to write "Create 'Name' 'Type' - Creates a new gradebook where 'Name' is the name of the gradebook and 'Type' is what type of grading it should use." to the console.
 
-	- [ ] Make the `BaseGradeBook` class abstract
-		- [ ] Add the `abstract` keyword to the `BaseGradeBook` declaration.
+	- [x] Make the `BaseGradeBook` class abstract
+		- [x] Add the `abstract` keyword to the `BaseGradeBook` declaration.
 
-- [ ] Add support for weighted GPAs
-	- [ ] Add `IsWeighted` property to `BaseGradeBook`
-		- [ ] Create a new `bool` property named `IsWeighted` in `BaseGradeBook`
+- [x] Add support for weighted GPAs
+	- [x] Add `IsWeighted` property to `BaseGradeBook`
+		- [x] Create a new `bool` property named `IsWeighted` in `BaseGradeBook`
 			- This should use the public access modifier.
 			- This should be of type `bool`.
 			- This should be named `IsWeighted`.
 
-	- [ ] Refactor constructor of `BaseGradeBook`
+	- [x] Refactor constructor of `BaseGradeBook`
 		_Note, once this group of tasks is begun the code will not compile until the entire group of tasks is complete._
-		- [ ] Add a `bool` to the `BaseGradeBook` constructor
+		- [x] Add a `bool` to the `BaseGradeBook` constructor
 			- This should be of type `bool`.
 			- This should be the second parameter.
-		- [ ] Set `IsWeight` in the `BaseGradeBook` constructor
+		- [x] Set `IsWeight` in the `BaseGradeBook` constructor
 			- [ ] Set the `IsWeighted` property using the `bool` parameter
-		- [ ] Add a `bool` to the `StandardGradeBook` constructor
+		- [x] Add a `bool` to the `StandardGradeBook` constructor
 			- This should be of type `bool`.
 			- This should be the second parameter.
 			- This will require the bool to be added to the call to the base constructor.
-		- [ ] Add a `bool` to the `RankedGradeBook` constructor
+		- [x] Add a `bool` to the `RankedGradeBook` constructor
 			- This should be of type `bool`.
 			- This should be the second parameter.
 			- This will require the bool to be added to the call to the base constructor.
-		- [ ] Update `StartingUserInterface.CreateCommand` condition
+		- [x] Update `StartingUserInterface.CreateCommand` condition
 			- Change the condition checking if `parts` is not equal to 3 to be is not equal to 4.
-		- [ ] Update `StartingUserInterface.CreateCommand` to accept `IsWeighted`
+		- [x] Update `StartingUserInterface.CreateCommand` to accept `IsWeighted`
 			- This should use `parts[3]` for the last parameter where the gradebooks are instantiated.
 			- Update the message provided by this condition to write to the console "Command not valid, Create requires a name, type of gradebook, if it's weighted (true / false).".
 
-	- [ ] Update `BaseGradeBook.GetGPA`
-		- [ ] Add 1 point to GPA when student is `Honors` or `DualEnrolled`
+	- [x] Update `BaseGradeBook.GetGPA`
+		- [x] Add 1 point to GPA when student is `Honors` or `DualEnrolled`
 
-	- [ ] Update `HelpCommand`
-		- [ ] Change where the `HelpCommand` outlines the "create" command to say "Create 'Name' 'Type' 'Weighted' - Creates a new gradebook where 'Name' is the name of the gradebook, 'Type' is what type of grading it should use, and 'Weighted' is whether or not grades should be weighted (true or false)."
+	- [x] Update `HelpCommand`
+		- [x] Change where the `HelpCommand` outlines the "create" command to say "Create 'Name' 'Type' 'Weighted' - Creates a new gradebook where 'Name' is the name of the gradebook, 'Type' is what type of grading it should use, and 'Weighted' is whether or not grades should be weighted (true or false)."
 
 ## What Now?
 
