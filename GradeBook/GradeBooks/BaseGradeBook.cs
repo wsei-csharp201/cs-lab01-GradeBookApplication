@@ -9,14 +9,17 @@ using Newtonsoft.Json.Linq;
 
 namespace GradeBook.GradeBooks
 {
-    public class BaseGradeBook
+    public abstract class BaseGradeBook
     {
         public string Name { get; set; }
         public List<Student> Students { get; set; }
+        public GradeBookType Type { get; set; }
+        public bool IsWeighted { get; set; }
 
-        public BaseGradeBook(string name)
+        public BaseGradeBook(string name, bool isWeighted)
         {
             Name = name;
+            IsWeighted = isWeighted;
             Students = new List<Student>();
         }
 
@@ -82,16 +85,31 @@ namespace GradeBook.GradeBooks
                 return null;
             }
 
+            BaseGradeBook gradeBook;
+
             using (var file = new FileStream(name + ".gdbk", FileMode.Open, FileAccess.Read))
             {
                 using (var reader = new StreamReader(file))
                 {
                     var json = reader.ReadToEnd();
-                    return ConvertToGradeBook(json);
+                    var jobject = JsonConvert.DeserializeObject<JObject>(json);
+                    var type = Enum.Parse(typeof(GradeBookType), jobject.GetValue("Type").ToString(), true);
+                    switch (type)
+                    {
+                        case GradeBookType.Standard:
+                            gradeBook = JsonConvert.DeserializeObject<StandardGradeBook>(json);
+                            break;
+                        case GradeBookType.Ranked:
+                            gradeBook = JsonConvert.DeserializeObject<RankedGradeBook>(json);
+                            break;
+                        default:
+                            gradeBook = JsonConvert.DeserializeObject<StandardGradeBook>(json);
+                            break;
+                    }
+                    return gradeBook;
                 }
             }
         }
-
         public void Save()
         {
             using (var file = new FileStream(Name + ".gdbk", FileMode.Create, FileAccess.Write))
@@ -106,20 +124,28 @@ namespace GradeBook.GradeBooks
 
         public virtual double GetGPA(char letterGrade, StudentType studentType)
         {
+            var gpa = 0;
             switch (letterGrade)
             {
                 case 'A':
-                    return 4;
+                    gpa=4;
+                    break;
                 case 'B':
-                    return 3;
+                    gpa= 3;
+                    break;
                 case 'C':
-                    return 2;
+                    gpa=2;
+                    break;
                 case 'D':
-                    return 1;
+                    gpa= 1;
+                    break;
                 case 'F':
-                    return 0;
+                    gpa =0;
+                    break;
             }
-            return 0;
+            if (IsWeighted && (studentType == StudentType.Honors || studentType == StudentType.DualEnrolled))
+                gpa++;
+            return gpa;
         }
 
         public virtual void CalculateStatistics()
