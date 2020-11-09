@@ -6,17 +6,25 @@ using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Security.Cryptography.X509Certificates;
+using System.ComponentModel;
 
 namespace GradeBook.GradeBooks
 {
-    public class BaseGradeBook
+    public abstract class BaseGradeBook
     {
+        
         public string Name { get; set; }
         public List<Student> Students { get; set; }
 
-        public BaseGradeBook(string name)
+        public bool IsWeighted { get; set; }
+
+        public GradeBookType Type { get; set; }
+
+        public BaseGradeBook(string name, bool isWeighted)
         {
             Name = name;
+            IsWeighted = isWeighted;
             Students = new List<Student>();
         }
 
@@ -106,10 +114,27 @@ namespace GradeBook.GradeBooks
 
         public virtual double GetGPA(char letterGrade, StudentType studentType)
         {
+            int bonus = 0;
+            if (IsWeighted)
+            {
+                switch (studentType)
+                {
+                    case StudentType.Standard:
+                        bonus = 0;
+                        break;
+                    case StudentType.Honors:
+                        bonus = 1;
+                        break;
+                    case StudentType.DualEnrolled:
+                        bonus = 1;
+                        break;
+                }
+            }
+
             switch (letterGrade)
             {
                 case 'A':
-                    return 4;
+                    return 4 + bonus;
                 case 'B':
                     return 3;
                 case 'C':
@@ -227,6 +252,7 @@ namespace GradeBook.GradeBooks
         /// <param name="json">Json.</param>
         public static dynamic ConvertToGradeBook(string json)
         {
+
             // Get GradeBookType from the GradeBook.Enums namespace
             var gradebookEnum = (from assembly in AppDomain.CurrentDomain.GetAssemblies()
                                  from type in assembly.GetTypes()
@@ -266,5 +292,6 @@ namespace GradeBook.GradeBooks
             
             return JsonConvert.DeserializeObject(json, gradebook);
         }
+        
     }
 }
