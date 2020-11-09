@@ -33,4 +33,4 @@ Po zakończeniu zadania rozważ opracowanie, na bazie kodu, aplikacji WPF (XAML)
 
 1. Rozbuduj logikę i interfejs aplikacji o inne formaty oceniania.
 2. Dodaj funkcjonalność automatycznego zapisywania po wykonaniu operacji na danych (dodanie/usunięcie/modyfikacja studenta albo jego ocen).
-3. Opracuj wariant aplikacji desktopowej z graficznym interfejsem użytkownika (WPF/XAML).
+3. Opracuj wariant aplikacji desktopowej z graficznym interfejsem użytkownika (WPF/XAML).# GradeBookZadanie
