@@ -1,0 +1,138 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/michalszczepanowski/cs-lab01-GradeBookApplication/GradeBookTests/GradeBookTests.csproj": {}
+  },
+  "projects": {
+    "/Users/michalszczepanowski/cs-lab01-GradeBookApplication/GradeBook/GradeBook.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/michalszczepanowski/cs-lab01-GradeBookApplication/GradeBook/GradeBook.csproj",
+        "projectName": "GradeBook",
+        "projectPath": "/Users/michalszczepanowski/cs-lab01-GradeBookApplication/GradeBook/GradeBook.csproj",
+        "packagesPath": "/Users/michalszczepanowski/.nuget/packages/",
+        "outputPath": "/Users/michalszczepanowski/cs-lab01-GradeBookApplication/GradeBook/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/michalszczepanowski/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.0": {
+            "targetAlias": "netcoreapp2.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.0": {
+          "targetAlias": "netcoreapp2.0",
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.0, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[10.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.102/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/michalszczepanowski/cs-lab01-GradeBookApplication/GradeBookTests/GradeBookTests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/michalszczepanowski/cs-lab01-GradeBookApplication/GradeBookTests/GradeBookTests.csproj",
+        "projectName": "GradeBookTests",
+        "projectPath": "/Users/michalszczepanowski/cs-lab01-GradeBookApplication/GradeBookTests/GradeBookTests.csproj",
+        "packagesPath": "/Users/michalszczepanowski/.nuget/packages/",
+        "outputPath": "/Users/michalszczepanowski/cs-lab01-GradeBookApplication/GradeBookTests/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/michalszczepanowski/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.0": {
+            "targetAlias": "netcoreapp2.0",
+            "projectReferences": {
+              "/Users/michalszczepanowski/cs-lab01-GradeBookApplication/GradeBook/GradeBook.csproj": {
+                "projectPath": "/Users/michalszczepanowski/cs-lab01-GradeBookApplication/GradeBook/GradeBook.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.0": {
+          "targetAlias": "netcoreapp2.0",
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.0, )",
+              "autoReferenced": true
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.3.1, )"
+            },
+            "xunit.runner.console": {
+              "target": "Package",
+              "version": "[2.3.1, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.3.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.102/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
