@@ -20,7 +20,7 @@ namespace GradeBook.GradeBooks
         {
             Name = name;
             Students = new List<Student>();
-            Type = GradeBook.Enums.GradeBookType.SixPoint;
+            Type = GradeBook.Enums.GradeBookType.Standard;
         }
 
         public void AddStudent(Student student)
