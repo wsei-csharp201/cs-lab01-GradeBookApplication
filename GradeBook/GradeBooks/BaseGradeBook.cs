@@ -17,12 +17,12 @@ namespace GradeBook.GradeBooks
 
         public GradeBook.Enums.GradeBookType Type { get; set; }
 
-        public BaseGradeBook(string name)
+        public BaseGradeBook(string name, bool isWeighted)
         {
             Name = name;
             Students = new List<Student>();
             Type = GradeBook.Enums.GradeBookType.Standard;
-            IsWeighted = true;
+            IsWeighted = isWeighted;
         }
 
         public void AddStudent(Student student)
