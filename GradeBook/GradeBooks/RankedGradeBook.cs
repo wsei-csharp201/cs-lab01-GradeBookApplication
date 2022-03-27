@@ -17,7 +17,7 @@ namespace GradeBook.GradeBooks
             if(Students.Count < 5) 
                 throw new InvalidOperationException("There is less than 5 students.");
 
-            double rank = Students.Count(student => student.AverageGrade > averageGrade) / Students.Count;
+            double rank = Students.Count(student => student.AverageGrade > averageGrade) / (double)Students.Count;
             Console.WriteLine(rank);
 
             if (rank < 0.2)
