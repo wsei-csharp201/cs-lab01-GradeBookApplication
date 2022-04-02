@@ -115,7 +115,7 @@ __Note:__ This isn't the only way to accomplish implementation, however; this is
 		- [D] Update `CreateCommand`'s Conditions
 			- When checking the `parts.Length` it should check that `parts.Length` is not 3.
 			- If `parts.Length` is not 3 write "Command not valid, Create requires a name and type of gradebook." to the Console.
-		- [ ] return a new GradeBook based on the provided type
+		- [D] return a new GradeBook based on the provided type
 			- If the value of `parts[2]` is "standard" return a newly instantiated `StandardGradeBook` using the `name` variable.
 			- If the value of `parts[2]` is "ranked" return a newly instantiated `RankedGradeBook` using the `name` variable.
 			- If the value of `parts[2]` doesn't match the above write the value of `parts[2]` followed by " is not a supported type of gradebook, please try again" to the console, then escape the method.
@@ -123,11 +123,11 @@ __Note:__ This isn't the only way to accomplish implementation, however; this is
 	- [D] Update `StartingUserInterfaces`'s `HelpCommand` method
 		- [ ] Change where `HelpCommand` outlines the "create" command to write "Create 'Name' 'Type' - Creates a new gradebook where 'Name' is the name of the gradebook and 'Type' is what type of grading it should use." to the console.
 
-	- [ ] Make the `BaseGradeBook` class abstract
+	- [D] Make the `BaseGradeBook` class abstract
 		- [ ] Add the `abstract` keyword to the `BaseGradeBook` declaration.
 
 - [ ] Add support for weighted GPAs
-	- [ ] Add `IsWeighted` property to `BaseGradeBook`
+	- [D] Add `IsWeighted` property to `BaseGradeBook`
 		- [ ] Create a new `bool` property named `IsWeighted` in `BaseGradeBook`
 			- This should use the public access modifier.
 			- This should be of type `bool`.

@@ -7,11 +7,12 @@ namespace GradeBook.GradeBooks
 {
     public class RankedGradeBook : BaseGradeBook
     {
-        public RankedGradeBook(string name) :base(name)
+        public RankedGradeBook(string name, bool isWeighted) :base(name, isWeighted)
         {
             Name = name;
+            IsWeighted = isWeighted;
             Type = GradeBookType.Ranked;
-        }
+        } 
         public override char GetLetterGrade(double averageGrade)
         {
             int studentCount = Students.Count;
