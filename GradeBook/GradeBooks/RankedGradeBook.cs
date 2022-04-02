@@ -21,27 +21,22 @@ namespace GradeBook.GradeBooks
 
             foreach (var Student in Students)
             {
-                if (Student.AverageGrade > averageGrade)
+                if (Student.AverageGrade >= averageGrade)
                     howMany++;
             }
-            double avg = (howMany / studentCount) * 100;
-            if (avg > 20)
-            {
+            double avg = (double)howMany / (double)studentCount;
+            avg = avg * 100;
+            if (avg <= 20)
                 return 'A';
-            }
-            else if (avg <= 20 && avg > 40)
-            {
+            if (avg <= 40)
                 return 'B';
-            } else if(avg <= 40 && avg > 60)
-            {
+            if (avg <= 60)
                 return 'C';
-            } else if(avg <= 60 && avg > 80)
-            {
-                return 'E';
-            } else
-            {
-                return 'F';
-            }
+            if (avg <= 80)
+                return 'D';
+            return 'F';
+
+            
 
 
         }
