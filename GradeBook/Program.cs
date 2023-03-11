@@ -8,7 +8,7 @@ namespace GradeBook
         static void Main(string[] args)
         {
             Console.WriteLine("#=======================#");
-            Console.WriteLine("# Welcome to GradeBook! #");
+            Console.WriteLine("# Welcome to GradeBookTEST! #");
             Console.WriteLine("#=======================#");
 
             StartingUserInterface.CommandLoop();
