@@ -67,13 +67,13 @@ namespace GradeBook.UserInterfaces
             Console.WriteLine();
             Console.WriteLine("GradeBook accepts the following commands:");
             Console.WriteLine();
-            Console.WriteLine("Create 'Name' - Creates a new gradebook where 'Name' is the name of the gradebook.");
+            Console.WriteLine("create 'Name' - Creates a new gradebook where 'Name' is the name of the gradebook.");
             Console.WriteLine();
-            Console.WriteLine("Load 'Name' - Loads the gradebook with the provided 'Name'.");
+            Console.WriteLine("load 'Name' - Loads the gradebook with the provided 'Name'.");
             Console.WriteLine();
-            Console.WriteLine("Help - Displays all accepted commands.");
+            Console.WriteLine("help - Displays all accepted commands.");
             Console.WriteLine();
-            Console.WriteLine("Quit - Exits the application");
+            Console.WriteLine("quit - Exits the application");
         }
     }
 }
