@@ -21,6 +21,12 @@ namespace GradeBook.GradeBooks
             Students = new List<Student>();
         }
 
+        public bool IsWeighted
+        {
+            get;
+            set;
+        }
+
         public void AddStudent(Student student)
         {
             if (string.IsNullOrEmpty(student.Name))
