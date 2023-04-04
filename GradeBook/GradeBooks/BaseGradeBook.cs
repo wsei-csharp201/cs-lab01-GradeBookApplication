@@ -13,19 +13,22 @@ namespace GradeBook.GradeBooks
     {   
         public GradeBookType Type { get; set; }
         public string Name { get; set; }
-        public List<Student> Students { get; set; }
-
-        public BaseGradeBook(string name)
-        {
-            Name = name;
-            Students = new List<Student>();
-        }
 
         public bool IsWeighted
         {
             get;
             set;
         }
+        public List<Student> Students { get; set; }
+
+        public BaseGradeBook(string name, bool IsWeight)
+        {
+            Name = name;
+            Students = new List<Student>();
+            IsWeighted = IsWeight;
+        }  
+
+    
 
         public void AddStudent(Student student)
         {
