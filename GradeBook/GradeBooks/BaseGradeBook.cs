@@ -112,7 +112,10 @@ namespace GradeBook.GradeBooks
             switch (letterGrade)
             {
                 case 'A':
-                    return 4;
+                    if (studentType == StudentType.Honors || studentType == StudentType.DualEnrolled)
+                        return 5;
+                    else
+                        return 4;
                 case 'B':
                     return 3;
                 case 'C':
@@ -122,6 +125,7 @@ namespace GradeBook.GradeBooks
                 case 'F':
                     return 0;
             }
+
             return 0;
         }
 
