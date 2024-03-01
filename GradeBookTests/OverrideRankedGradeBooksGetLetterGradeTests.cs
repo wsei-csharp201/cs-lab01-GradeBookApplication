@@ -84,7 +84,7 @@ namespace GradeBookTests
             }
             else
             {
-                Assert.True(false, "`RankedGradeBook.GetLetterGrade` is either not overriding `BaseGradeBook.GetLetterGrade` or is using `base.GetLetterGrade` within the override.");
+                Assert.Fail("`RankedGradeBook.GetLetterGrade` is either not overriding `BaseGradeBook.GetLetterGrade` or is using `base.GetLetterGrade` within the override.");
             }
         }
 
@@ -156,7 +156,7 @@ namespace GradeBookTests
             }
             else
             {
-                Assert.True(false, "`RankedGradeBook.GetLetterGrade` is either not overriding `BaseGradeBook.GetLetterGrade` or is using `base.GetLetterGrade` within the override.");
+                Assert.Fail("`RankedGradeBook.GetLetterGrade` is either not overriding `BaseGradeBook.GetLetterGrade` or is using `base.GetLetterGrade` within the override.");
             }
         }
 
