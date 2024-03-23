@@ -203,6 +203,8 @@ namespace GradeBook.GradeBooks
                 Console.WriteLine(grade);
             }
         }
+        public GradeBookType Type { get; set; }
+
 
         public virtual char GetLetterGrade(double averageGrade)
         {
